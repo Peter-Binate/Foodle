@@ -1,0 +1,34 @@
+# Fichiers de base de Django
+*.pyc
+__pycache__/
+
+# Environnement virtuel
+env/
+venv/
+
+# Fichiers sensibles
+.env
+*.env
+
+# Fichiers de configuration de Docker
+docker-compose.override.yml
+
+# Fichiers statiques et médias (générés)
+static/
+media/
+
+# Fichiers de logs
+*.log
+logs/
+
+# Fichiers de base de données SQLite (pour les tests)
+db.sqlite3
+
+# Fichiers spécifiques à l'IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Fichiers générés par des tests
+coverage/
