@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 import os
 from pathlib import Path
 from dotenv import load_dotenv

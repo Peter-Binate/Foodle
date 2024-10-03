@@ -1,5 +1,6 @@
 from django.db import models
 from ingredients import values as ingredient_values
+from django.utils import timezone
 
 # Create your models here.
 class Ingredient(models.Model):
@@ -17,6 +18,10 @@ class Ingredient(models.Model):
         "Nom du magasin",
         choices=ingredient_values.SHOP_NAME,
         default=0
+    ),
+    expiration_date = models.fields.DateField(
+        "Date de péremption",
+        default=timezone.now
     )
 
     def __str__(self):
