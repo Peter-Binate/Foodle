@@ -16,7 +16,39 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from ingredients import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path(
+        'ingredients/', 
+        views.ingredient_list, 
+        name='ingredient-list'
+    ),
+    path(
+        'ingredients/<int:ingredient_id>/', 
+        views.ingredient_detail, 
+        name='ingredient-detail'
+    ),
+    path(
+        'contact-us/',
+         views.contact,
+         name='contact'   
+    ),
+    path(
+        'ingredients/add',
+        views.ingredient_create,
+        name='ingredient-create'
+    ),
+    path(
+        'ingredients/<int:ingredient_id>/update/',
+        views.ingredient_update,
+        name='ingredient-update'
+    ),
+    path(
+        'ingredients/<int:ingredient_id>/delete/',
+        views.ingredient_delete,
+        name='ingredient-delete'
+    )
+
 ]

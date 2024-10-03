@@ -1,0 +1,21 @@
+{% extends 'ingredients/base.html' %}
+
+{% block content %}
+
+<nav>
+    <a href="{% url 'ingredient-list' %}">Retour à tous les groupes</a>
+</nav>
+
+<h2>{{ ingredient.name }}</h2>
+
+<ul>
+ <li>Prix: {{ ingredient.price }}</li>
+ <li>Magasin: {{ ingredient.get_shop_display }}</li>
+</ul>
+
+<a href="{% url 'ingredient-update' ingredient.id %}">Modifier ce groupe</a> -
+<a href="{% url 'ingredient-delete' ingredient.id %}">
+    Supprimer
+</a>
+
+{% endblock %}
